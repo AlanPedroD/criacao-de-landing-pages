@@ -129,7 +129,6 @@
 }
 
 
-
 /*! Hero */
 .hero-imagem {
   position: relative;
@@ -145,7 +144,6 @@
   height: auto;
 }
 
-
 .hero-imagem .overlay {
   background-color: rgba(0, 0, 0, 0.6);
   padding: 60px 20px;
@@ -154,36 +152,48 @@
 }
 
 .hero-imagem h1 {
-  font-size: 3rem;
-  margin-bottom: 20px;
+  font-size: 3.4rem;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-family: "Spinnaker", sans-serif;
 }
 
 .hero-imagem p {
   font-size: 1.2rem;
-  /* margin-bottom: 30px; */
+  margin-bottom: 10px;
+  text-transform: uppercase;
 }
 
 .hero-imagem .botao {
-  padding: 14px 28px;
-  background-color: #00bcd4;
+  padding: 16px 30px;
+  background-color: #222831;
+  border: 2px solid #222831;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
   font-weight: bold;
+  text-transform: uppercase;
+  transition: .3s;
+}
+.hero-imagem .botao:hover{
+  background-color: rgba(34, 40, 49, 0.6);
+  border-color: #EAEFEF;
 }
 
 
-
 /*! Seção serviços e seção proejtos */
+.container-servicos{
+  background: linear-gradient(to bottom, #EAEFEF, #7F8CAA, #333446);
+}
+.container-projetos{
+  background-color: #333446;
+}
 .section h3{
   text-transform: uppercase;
 }
 .servicos{
-  background-color: #7F8CAA;
   color: #EAEFEF;
 }
 .projetos{
-  background-color: #333446;
   color: #EAEFEF;
 }
 .section {
@@ -210,12 +220,12 @@
 .card {
   background-color: var(--card-bg);
   padding: 1.5rem;
-  border-radius: 1rem;
+  /* border-radius: 1rem; */
   box-shadow: 0 4px 10px var(--card-shadow);
   transition: transform 0.2s ease;
   position: relative;
   overflow: hidden;
-  border: 1px solid red;
+  border: 1px solid #EAEFEF;
 }
 
 .card:hover {
@@ -230,9 +240,6 @@
   font-size: 0.95rem;
   line-height: 1.4;
 }
-
-
-
 
 
 /*! Responsividade Cabeçalho */

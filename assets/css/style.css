@@ -10,7 +10,8 @@
   top: 0;
   left: 0;
   width: 100%;
-  background-color: #111;
+  /* background-color: #111; */
+  background-color: #333446;
   color: white;
   display: flex;
   justify-content: space-around;
@@ -172,6 +173,67 @@
 
 
 
+/*! Seção serviços e seção proejtos */
+.section h3{
+  text-transform: uppercase;
+}
+.servicos{
+  background-color: #7F8CAA;
+  color: #EAEFEF;
+}
+.projetos{
+  background-color: #333446;
+  color: #EAEFEF;
+}
+.section {
+  padding: 4rem 2rem;
+  max-width: 1140px;
+  margin: 0 auto;
+  position: relative;
+}
+.section h3 {
+  font-size: 1.8rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+  align-items: stretch; /* <-- esta linha garante a altura igual */
+}
+
+
+.card {
+  background-color: var(--card-bg);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 4px 10px var(--card-shadow);
+  transition: transform 0.2s ease;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid red;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card h4 {
+  margin-bottom: 0.5rem;
+}
+
+.card p {
+  font-size: 0.95rem;
+  line-height: 1.4;
+}
+
+
+
+
+
 /*! Responsividade Cabeçalho */
 @media (max-width: 768px) {
   .header{
@@ -204,8 +266,15 @@
 
 
 /*! Responsividade hero */
-@media (min-width: 768px) {
+@media (min-width: 769px) {
   .hero-imagem {
     min-height: 100vh; 
   }
+}
+
+@media(max-width: 768px){
+  .hero-imagem .overlay {
+  padding: 40px 20px;
+  width: 80%;
+}
 }

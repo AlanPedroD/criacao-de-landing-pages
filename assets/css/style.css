@@ -3,7 +3,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+body{
+  font-family: "Lato", sans-serif;
+}
 
 .header {
   position: fixed;
@@ -167,7 +169,7 @@
 .hero-imagem .botao {
   padding: 16px 30px;
   background-color: #222831;
-  border: 2px solid #222831;
+  /* border: 1px solid #222831; */
   color: white;
   text-decoration: none;
   font-weight: bold;
@@ -175,14 +177,15 @@
   transition: .3s;
 }
 .hero-imagem .botao:hover{
-  background-color: rgba(34, 40, 49, 0.6);
-  border-color: #EAEFEF;
+  background-color: #EAEFEF;
+  color: #222831;
 }
 
 
 /*! Seção serviços e seção proejtos */
 .container-servicos{
-  background: linear-gradient(to bottom, #EAEFEF, #7F8CAA, #333446);
+  /* background: linear-gradient(to bottom, #EAEFEF, #7F8CAA, #333446); */
+  background: linear-gradient(to bottom right, #222831, #393E46);
 }
 .container-projetos{
   background-color: #333446;
@@ -234,11 +237,12 @@
 
 .card h4 {
   margin-bottom: 0.5rem;
+  font-size: 15px;
 }
 
 .card p {
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.5;
 }
 
 

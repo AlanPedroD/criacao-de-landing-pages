@@ -4,10 +4,6 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: Arial, sans-serif;
-  overflow-x: hidden;
-}
 
 .header {
   position: fixed;
@@ -59,6 +55,7 @@ body {
   color: #00bcd4;
 }
 
+/*! Menu Hamburguer */
 .hamburger {
   display: none;
   width: 30px;
@@ -129,9 +126,51 @@ body {
   background-color: #333;
 }
 
-main {
-  padding-top: 80px;
+
+
+/*! Hero */
+.hero-imagem {
+  position: relative;
+  background-image: url(../imagens/imagem-hero-02.jpg);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 20px;
+  height: auto;
 }
+
+
+.hero-imagem .overlay {
+  background-color: rgba(0, 0, 0, 0.6);
+  padding: 60px 20px;
+  width: 60%;
+  text-align: center;
+}
+
+.hero-imagem h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+}
+
+.hero-imagem p {
+  font-size: 1.2rem;
+  /* margin-bottom: 30px; */
+}
+
+.hero-imagem .botao {
+  padding: 14px 28px;
+  background-color: #00bcd4;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
 
 /*! Responsividade Cabeçalho */
 @media (max-width: 768px) {
@@ -160,5 +199,13 @@ main {
   }
   .hamburger span{
     height: 2px;
+  }
+}
+
+
+/*! Responsividade hero */
+@media (min-width: 768px) {
+  .hero-imagem {
+    min-height: 100vh; 
   }
 }

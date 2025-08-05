@@ -1,0 +1,164 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  overflow-x: hidden;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #111;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+  font-family: "Spinnaker", sans-serif;
+  text-transform: uppercase;
+}
+
+.header .logo {
+  display: flex;
+  align-items: center;
+  color: white;
+  transition: .4s;
+}
+.header .logo a{
+  text-decoration: none;
+  color: inherit;
+  transition: .4s;
+}
+
+.header .logo strong{
+  font-size: 16px;
+}
+.header .logo i{
+  font-size: 12px;
+}
+
+.header nav {
+  display: flex;
+  gap: 2rem;
+}
+
+.header nav a {
+  color: white;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.header nav a:hover {
+  color: #00bcd4;
+}
+
+.hamburger {
+  display: none;
+  width: 30px;
+  height: 22px;
+  position: relative;
+  cursor: pointer;
+  z-index: 1001;
+}
+
+.hamburger span {
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: white;
+  left: 0;
+  transition: 0.3s ease;
+}
+
+.hamburger span:nth-child(1) {
+  top: 0;
+}
+
+.hamburger span:nth-child(2) {
+  top: 9px;
+}
+
+.hamburger span:nth-child(3) {
+  top: 18px;
+}
+
+.hamburger.active span:nth-child(1) {
+  transform: rotate(45deg);
+  top: 9px;
+}
+
+.hamburger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+  transform: rotate(-45deg);
+  top: 9px;
+}
+
+.mobile-menu {
+  display: none;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  background-color: #222;
+  border-radius: 8px;
+  padding: 0.5rem 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+  min-width: 160px;
+  z-index: 999;
+}
+
+.mobile-menu a {
+  padding: 0.75rem 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: left;
+  transition: background-color 0.3s;
+}
+
+.mobile-menu a:hover {
+  background-color: #333;
+}
+
+main {
+  padding-top: 80px;
+}
+
+/*! Responsividade Cabeçalho */
+@media (max-width: 768px) {
+  .header{
+    justify-content: space-between;
+  }
+  .header nav {
+    display: none;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .mobile-menu.active {
+    display: flex;
+  }
+}
+
+@media(max-width: 376px){
+  .header .logo strong{
+    font-size: 14px;
+  }
+  .header .logo span{
+    font-size: 10px;
+  }
+  .hamburger span{
+    height: 2px;
+  }
+}

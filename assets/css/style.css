@@ -243,6 +243,180 @@ body{
 }
 
 
+/*! Formulário */
+.container-formulario{
+  display: flex;
+  justify-content: center;
+  background-color: #7F8CAA;
+}
+.contato-container {
+      display: flex;
+      max-width: 1000px;
+      width: 100%;
+      background-color: rgba(34, 40, 49, 0.85);
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      flex-wrap: wrap;
+      color: #EAEFEF;
+    }
+
+    .faq {
+      flex: 1;
+      padding: 40px;
+      background-color: #1e2229;
+    }
+
+    .faq h3 {
+      margin-top: 0;
+      font-size: 22px;
+    }
+
+    .faq-item {
+      margin-bottom: 20px;
+    }
+
+    .faq-item strong {
+      display: block;
+      margin-bottom: 5px;
+      color: #00adb5;
+    }
+
+    .formulario {
+      flex: 1;
+      padding: 40px;
+      background-color: #222831;
+    }
+
+    .formulario h2 {
+      margin-top: 0;
+    }
+
+    .formulario form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .formulario input,
+    .formulario textarea {
+      padding: 12px;
+      margin-bottom: 15px;
+      border: none;
+      border-radius: 6px;
+      background-color: #393e46;
+      color: #fff;
+    }
+
+    .formulario button {
+      background-color: #00adb5;
+      border: none;
+      padding: 12px;
+      color: #fff;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+
+    @media (max-width: 768px) {
+      .contato-container {
+        flex-direction: column;
+      }
+    }
+
+
+
+/*! Rodapé */
+.footer {
+  background: #222831;
+  color: #eee;
+  padding: 40px 20px;
+}
+
+.footer-container {
+  max-width: 1140px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.footer-column {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-column h3,
+.footer-column h4 {
+  color: #fff;
+  margin-bottom: 15px;
+}
+
+.footer-column ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-column ul li {
+  margin-bottom: 8px;
+}
+
+.footer-column ul li a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column ul li a:hover {
+  color: #00adb5;
+}
+
+/* Descrição com largura controlada */
+.footer-description {
+  max-width: 280px;
+  line-height: 1.6;
+}
+
+/* Linha divisória */
+.footer hr {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 30px 0;
+}
+
+/* Texto inferior */
+.footer-bottom {
+  text-align: center;
+  color: #888;
+  font-size: 14px;
+}
+
+.footer-column a {
+  color: #ccc;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-column a:hover {
+  color: #00adb5;
+}
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .footer-description {
+    max-width: 100%;
+    margin: 0 auto;
+  }
+}    
+
+
+
+
 /*! Responsividade Cabeçalho */
 @media (max-width: 768px) {
   .header{

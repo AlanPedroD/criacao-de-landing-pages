@@ -111,8 +111,8 @@ body{
   position: absolute;
   top: 100%;
   right: 2rem;
-  background-color: #222;
-  border-radius: 8px;
+  background-color: #222831;
+  border-radius: 0 0 8px;
   padding: 0.5rem 0;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
   min-width: 160px;
@@ -247,7 +247,7 @@ body{
 .container-formulario{
   display: flex;
   justify-content: center;
-  background-color: #B2B0E8;
+  background-color: #b2b0e8db;
 }
 .contato-container {
   display: flex;

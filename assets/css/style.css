@@ -356,7 +356,6 @@ footer a{
 .container-footer .logo p{
   width: 100%;
   max-width: 300px;
-  color: #EAEFEF;
 }
 .container-footer .logo a{
   display: flex;
@@ -366,7 +365,6 @@ footer a{
 }
 .container-footer .logo strong{
   font-size: 10px;
-  color: #EAEFEF;
 }
 
 .container-footer .links,
@@ -384,11 +382,11 @@ footer a{
   text-align: center;
   margin-top: 30px;
   border-top: 1px solid #444;
-  padding-top: 15px;
+  padding: 20px 10px 30px 10px;
   font-size: 14px;
   color: #bbb;
-  padding: 20px 10px 30px 10px;
 }
+
 
 /*! Responsividade Cabeçalho */
 @media (max-width: 768px) {

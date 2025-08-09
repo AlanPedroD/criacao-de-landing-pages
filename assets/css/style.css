@@ -4,6 +4,11 @@
   box-sizing: border-box;
   text-decoration: none;
 }
+
+html{
+  scroll-behavior: smooth;
+}
+
 body{
   font-family: "Lato", sans-serif;
   color: #EAEFEF;
@@ -387,6 +392,54 @@ footer a{
   color: #bbb;
 }
 
+/*! Botões whatsap e Voltar ao topo */
+/* Botão voltar ao topo */
+.scroll-to-top {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  padding: 10px 12px;
+  border-radius: 50%;
+  font-size: 20px;
+  cursor: pointer;
+  display: none;
+  z-index: 999;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.scroll-to-top.show {
+  display: block;
+  opacity: 0.9;
+}
+.scroll-to-top:hover {
+  opacity: 1;
+  transform: translateY(-3px);
+}
+
+/* WhatsApp fixo */
+.whatsapp-fixo {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background-color: #25d366;
+  color: #fff;
+  font-size: 28px;
+  padding: 12px;
+  width: 52px;
+  height: 52px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  z-index: 999;
+  transition: transform 0.3s ease;
+}
+.whatsapp-fixo:hover {
+  transform: scale(1.1);
+}
 
 /*! Responsividade Cabeçalho */
 @media (max-width: 768px) {
@@ -454,4 +507,12 @@ footer a{
   text-align: center;
 }
 
+}
+
+@media(max-width: 376px){
+  .whatsapp-fixo{
+    width: 42px;
+    height: 42px;
+    max-width: 100%;
+  }
 }

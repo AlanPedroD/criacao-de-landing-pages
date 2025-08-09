@@ -18,7 +18,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet"> 
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="inicio">
     <div class="logo">
       <i class="bi bi-code-slash"></i>
       <div class="nome-autor">
@@ -31,10 +31,11 @@
     </div>
 
     <nav>
-      <a href="#">Início</a>
-      <a href="#">Serviços</a>
+      <a href="#inicio">Início</a>
+      <a href="#servicos">Serviços</a>
+      <a href="#projetos">Projetos</a>
       <a href="#">Sobre</a>
-      <a href="#">Contato</a>
+      <a href="#contato">Contato</a>
     </nav>
 
     <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -61,7 +62,7 @@
     </div>
   </section>
 
-  <div class="container-servicos">
+  <div class="container-servicos" id="servicos">
     <section class="section servicos">
       <h3>Serviços</h3>
       <div class="card-grid">
@@ -81,7 +82,7 @@
     </section>
   </div>
 
-  <div class="container-projetos">
+  <div class="container-projetos" id="projetos">
     <section class="section projetos">
       <h3>Projetos Recentes</h3>
       <div class="card-grid">
@@ -103,7 +104,7 @@
 
   
   <!--! Formulário -->
-  <div class="container-formulario">
+  <div class="container-formulario" id="contato">
     <div class="section">
       <div class="contato-container">
         <div class="faq">
@@ -172,6 +173,16 @@
       <p>&copy; 2025 Alan Dias. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <!-- Botão Voltar ao Topo -->
+<button id="scrollToTop" class="scroll-to-top">
+  <i class="bi bi-arrow-up"></i>
+</button>
+
+<!-- Ícone WhatsApp -->
+<a href="https://wa.me/5582996429077" class="whatsapp-fixo" target="_blank" aria-label="WhatsApp">
+  <i class="bi bi-whatsapp"></i>
+</a>
 
 </body>
 </html>

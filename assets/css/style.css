@@ -191,9 +191,11 @@ body{
 .container-servicos{
   /* background: linear-gradient(to bottom, #EAEFEF, #7F8CAA, #333446); */
   background: linear-gradient(to bottom right, #222831, #393E46);
+  padding: 80px 20px 100px 20px;
 }
 .container-projetos{
   background-color: #333446;
+  padding: 80px 20px 100px 20px;
 }
 .section h3{
   text-transform: uppercase;
@@ -253,6 +255,8 @@ body{
   display: flex;
   justify-content: center;
   background-color: #b2b0e8db;
+
+  padding: 80px 20px 80px 20px;
 }
 .contato-container {
   display: flex;

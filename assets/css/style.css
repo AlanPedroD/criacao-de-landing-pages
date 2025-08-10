@@ -203,6 +203,7 @@ body{
 .servicos{
   color: #EAEFEF;
 }
+
 .projetos{
   color: #EAEFEF;
 }
@@ -241,12 +242,13 @@ body{
 
 .card h4 {
   margin-bottom: 0.5rem;
-  font-size: 15px;
+  font-size: 17px;
 }
 
 .card p {
-  font-size: 0.95rem;
+  font-size: 1.2rem;
   line-height: 1.5;
+  color: #bbb;
 }
 
 

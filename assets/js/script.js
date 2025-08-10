@@ -42,7 +42,7 @@ if (toggleBtn) {
 
 // ==================== SCROLL SUAVE COM LENIS ====================
 const lenis = new Lenis({
-  duration: 0.6, // quanto maior, mais lento
+  duration: 0.5, // quanto maior, mais lento
   easing: t => t, // linear
   smooth: true
 });

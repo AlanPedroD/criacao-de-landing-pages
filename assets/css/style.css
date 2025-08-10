@@ -328,6 +328,11 @@ body{
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
+  font-size: 12px;
+  transition: .3s;
+}
+.formulario button:hover{
+  background-color: #3b9498;
 }
 
 @media (max-width: 768px) {

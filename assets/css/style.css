@@ -299,6 +299,7 @@ body{
 
 .formulario h2 {
   margin-top: 0;
+  margin-bottom: 5px;
 }
 
 .formulario form {
@@ -314,6 +315,7 @@ body{
   border-radius: 6px;
   background-color: #393e46;
   color: #fff;
+  font-size: 12px;
 }
 
 .formulario button {

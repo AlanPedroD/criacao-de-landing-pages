@@ -157,6 +157,7 @@ body{
   padding: 60px 20px;
   width: 60%;
   text-align: center;
+  border-radius: 4px;
 }
 
 .hero-imagem h1 {

@@ -5,6 +5,10 @@
   text-decoration: none;
 }
 
+html{
+  font-size: 62.5%;
+}
+
 html, body{
   scroll-behavior: auto;
 }
@@ -12,7 +16,18 @@ html, body{
 body{
   font-family: "Lato", sans-serif;
   color: #EAEFEF;
+  font-size: 1.6rem;
 }
+
+h1 {
+  font-size: 3.2rem; /* 32px */
+}
+
+p {
+  font-size: 1.4rem; /* 14px */
+}
+
+
 
 .header {
   position: fixed;
@@ -43,10 +58,10 @@ body{
 }
 
 .header .logo strong{
-  font-size: 16px;
+  font-size: 1.6rem;
 }
 .header .logo i{
-  font-size: 12px;
+  font-size: 1.3rem;
 }
 
 .header nav {
@@ -58,6 +73,7 @@ body{
   color: white;
   text-decoration: none;
   transition: color 0.3s;
+  font-size: 1.6rem;
 }
 
 .header nav a:hover {
@@ -161,14 +177,14 @@ body{
 }
 
 .hero-imagem h1 {
-  font-size: 3.4rem;
+  font-size: 4.5rem;
   margin-bottom: 50px;
   text-transform: uppercase;
   font-family: "Spinnaker", sans-serif;
 }
 
 .hero-imagem p {
-  font-size: 1.2rem;
+  font-size: 1.8rem;
   margin-bottom: 10px;
   text-transform: uppercase;
 }
@@ -176,8 +192,8 @@ body{
 .hero-imagem .botao {
   padding: 16px 30px;
   background-color: #222831;
-  /* border: 1px solid #222831; */
   color: white;
+  font-size: 1.6rem;
   text-decoration: none;
   font-weight: bold;
   text-transform: uppercase;
@@ -215,7 +231,7 @@ body{
   position: relative;
 }
 .section h3 {
-  font-size: 1.8rem;
+  font-size: 3rem;
   margin-bottom: 2rem;
   text-align: center;
 }
@@ -243,11 +259,11 @@ body{
 
 .card h4 {
   margin-bottom: 0.5rem;
-  font-size: 17px;
+  font-size: 3rem;
 }
 
 .card p {
-  font-size: 1.2rem;
+  font-size: 1.9rem;
   line-height: 1.5;
   color: #bbb;
 }
@@ -293,6 +309,7 @@ body{
   display: block;
   margin-bottom: 5px;
   color: #00adb5;
+  font-size: 2.3rem;
 }
 
 .formulario {
@@ -319,7 +336,7 @@ body{
   border-radius: 6px;
   background-color: #393e46;
   color: #fff;
-  font-size: 12px;
+  font-size: 1.6rem;
 }
 
 .formulario button {
@@ -329,7 +346,7 @@ body{
   color: #fff;
   border-radius: 6px;
   cursor: pointer;
-  font-size: 12px;
+  font-size: 1.6rem;
   transition: .3s;
 }
 .formulario button:hover{
@@ -380,11 +397,11 @@ footer a{
 .container-footer .logo a{
   display: flex;
   flex-direction: column;
-  font-size: 13px;
+  font-size: 1.7rem;
   text-transform: uppercase;
 }
 .container-footer .logo strong{
-  font-size: 10px;
+  font-size: 1rem;
 }
 
 .container-footer .links,
@@ -403,7 +420,7 @@ footer a{
   margin-top: 30px;
   border-top: 1px solid #444;
   padding: 20px 10px 30px 10px;
-  font-size: 14px;
+  font-size: 1.6rem;
   color: #bbb;
 }
 
@@ -418,7 +435,7 @@ footer a{
   border: none;
   padding: 10px 12px;
   border-radius: 50%;
-  font-size: 20px;
+  font-size: 3.2rem;
   cursor: pointer;
   display: none;
   z-index: 999;
@@ -440,7 +457,7 @@ footer a{
   right: 20px;
   background-color: #25d366;
   color: #fff;
-  font-size: 28px;
+  font-size: 3.2rem;
   padding: 12px;
   width: 52px;
   height: 52px;

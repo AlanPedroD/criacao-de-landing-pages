@@ -225,6 +225,13 @@ p {
 .servicos{
   color: #EAEFEF;
 }
+.servicos .container-imagem{
+  width: 100%;
+  max-width: 280px;
+}
+.servicos .container-imagem img{
+  width: 100%;
+}
 
 .projetos{
   color: #EAEFEF;

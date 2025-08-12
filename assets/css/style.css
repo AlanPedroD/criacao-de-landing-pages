@@ -69,8 +69,9 @@ p {
   display: flex;
   gap: 2rem;
   border: 2px solid #7F8CAA;
-  padding: 10px 10px;
+  padding: 10px 16px;
   border-radius: 50px;
+  background-color: #333446;
 }
 
 .header nav a {

@@ -225,13 +225,15 @@ p {
 .servicos{
   color: #EAEFEF;
 }
-.servicos .container-imagem{
+.container-imagem{
   width: 100%;
   max-width: 362px;
+  display: flex;
 }
-.servicos .container-imagem img{
+.container-imagem img{
   width: 100%;
   max-height: 232px;
+  border-radius: 4px;
 }
 
 .projetos{

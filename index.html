@@ -129,13 +129,11 @@
         </div>
         <div class="formulario">
           <h2>Entre em Contato</h2>
-          <form action="https://formspree.io/f/xldlgynn" method="POST">
-            <input type="text" name="name" placeholder="Seu nome" required>
+          <form id="contactForm" action="https://formspree.io/f/SEU_ID_AQUI" method="POST" novalidate>
+            <input type="text" name="name" placeholder="Seu nome" required minlength="3">
             <input type="email" name="email" placeholder="Seu e-mail" required>
-            <textarea name="message" rows="5" placeholder="Sua mensagem" required></textarea>
-
+            <textarea name="message" rows="5" placeholder="Sua mensagem" required minlength="5"></textarea>
             <button type="submit">Enviar</button>
-            <p id="formMessage" style="display:none; margin-top:10px;"></p>
           </form>
 
         </div>

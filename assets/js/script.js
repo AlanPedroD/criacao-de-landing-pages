@@ -89,11 +89,29 @@ if (scrollToTopBtn) {
 
 
 //! Formulário
-document.getElementById("contactForm").addEventListener("submit", async function(e) {
-  e.preventDefault(); // Impede recarregamento da página
-  
-  const form = e.target;
-  const message = document.getElementById("formMessage");
+const form = document.getElementById("contactForm");
+const inputs = form.querySelectorAll("input, textarea");
+
+// Marca o campo como "tocado" quando o usuário interagir
+inputs.forEach(input => {
+  input.addEventListener("input", () => {
+    input.classList.add("touched");
+  });
+  input.addEventListener("blur", () => {
+    input.classList.add("touched");
+  });
+});
+
+form.addEventListener("submit", async function(e) {
+  e.preventDefault();
+
+  // Garante que todos os campos já tenham a classe "touched" ao tentar enviar
+  inputs.forEach(input => input.classList.add("touched"));
+
+  if (!form.checkValidity()) {
+    alert("Por favor, preencha todos os campos corretamente antes de enviar.");
+    return;
+  }
 
   try {
     const response = await fetch(form.action, {
@@ -103,18 +121,13 @@ document.getElementById("contactForm").addEventListener("submit", async function
     });
 
     if (response.ok) {
-      message.style.display = "block";
-      message.style.color = "green";
-      message.textContent = "Mensagem enviada com sucesso!";
+      alert("Mensagem enviada com sucesso!");
       form.reset();
+      inputs.forEach(input => input.classList.remove("touched")); // Remove bordas após envio
     } else {
-      message.style.display = "block";
-      message.style.color = "red";
-      message.textContent = "Ocorreu um erro ao enviar. Tente novamente.";
+      alert("Ocorreu um erro ao enviar. Tente novamente.");
     }
   } catch (error) {
-    message.style.display = "block";
-    message.style.color = "red";
-    message.textContent = "Erro de conexão. Tente mais tarde.";
+    alert("Erro de conexão. Tente mais tarde.");
   }
 });

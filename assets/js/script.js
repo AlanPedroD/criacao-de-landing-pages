@@ -86,3 +86,35 @@ if (scrollToTopBtn) {
     lenis.scrollTo(0); // usa o Lenis também
   });
 }
+
+
+//! Formulário
+document.getElementById("contactForm").addEventListener("submit", async function(e) {
+  e.preventDefault(); // Impede recarregamento da página
+  
+  const form = e.target;
+  const message = document.getElementById("formMessage");
+
+  try {
+    const response = await fetch(form.action, {
+      method: form.method,
+      body: new FormData(form),
+      headers: { 'Accept': 'application/json' }
+    });
+
+    if (response.ok) {
+      message.style.display = "block";
+      message.style.color = "green";
+      message.textContent = "Mensagem enviada com sucesso!";
+      form.reset();
+    } else {
+      message.style.display = "block";
+      message.style.color = "red";
+      message.textContent = "Ocorreu um erro ao enviar. Tente novamente.";
+    }
+  } catch (error) {
+    message.style.display = "block";
+    message.style.color = "red";
+    message.textContent = "Erro de conexão. Tente mais tarde.";
+  }
+});

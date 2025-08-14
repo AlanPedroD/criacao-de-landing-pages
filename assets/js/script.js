@@ -56,18 +56,22 @@ requestAnimationFrame(raf);
 // Links do menu
 // Links com scroll suave (menu e botões)
 document.addEventListener('DOMContentLoaded', function () {
-  const linksSuaves = document.querySelectorAll('a[href^="#"]'); // pega todos os links âncora
+  const linksSuaves = document.querySelectorAll('a[href^="#"]');
 
   linksSuaves.forEach(link => {
     link.addEventListener('click', function (e) {
       e.preventDefault();
       const destino = document.querySelector(this.getAttribute('href'));
       if (destino) {
-        lenis.scrollTo(destino);
+        const offset = 60; // altura do cabeçalho fixo
+        const topPos = destino.getBoundingClientRect().top + window.scrollY - offset;
+
+        lenis.scrollTo(topPos);
       }
     });
   });
 });
+
 
 
 // ==================== BOTÃO VOLTAR AO TOPO ====================

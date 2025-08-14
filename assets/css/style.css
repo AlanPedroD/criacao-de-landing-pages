@@ -302,8 +302,8 @@ p {
   font-size: 1.9rem;
   line-height: 1.5;
   color: #bbb;
+  margin-bottom: 6px;
 }
-
 
 /*! Formulário */
 .container-formulario{
@@ -391,12 +391,13 @@ p {
 
 /*! Validação formulário */
   /* Apenas para estados de validação */
-   .touched:invalid {
+.touched.invalid {
     border: 2px solid #e74c3c !important; /* Vermelho */
   }
-  .touched:valid {
+
+.touched.valid {
     border: 2px solid #2ecc71 !important; /* Verde */
-  }
+}
 
 
 @media (max-width: 768px) {
@@ -535,6 +536,16 @@ footer a{
   .mobile-menu.active {
     display: flex;
   }
+}
+@media(max-width: 664px){
+  .container-imagem{
+  width: 100%;
+  max-width: 560px;
+  justify-content: center;
+}
+.container-imagem img{
+  max-height: 360px;
+}
 }
 
 @media(max-width: 376px){

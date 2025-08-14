@@ -87,28 +87,71 @@ if (scrollToTopBtn) {
   });
 }
 
-
 //! Formulário
 const form = document.getElementById("contactForm");
 const inputs = form.querySelectorAll("input, textarea");
 
-// Marca o campo como "tocado" quando o usuário interagir
+const nomesCurtosValidos = ["Jo", "Jó", "Li", "Lu", "Bo", "Di", "Su", "An"];
+
+function validarNome(nome) {
+  const nomeTrim = nome.trim();
+  const soLetras = /^[A-Za-zÀ-ÿ\s]+$/.test(nomeTrim);
+
+  if (!soLetras) return false;
+
+  const semEspacos = nomeTrim.replace(/\s+/g, '');
+
+  // Nome com 3 ou mais letras é aceito
+  if (semEspacos.length >= 3) return true;
+
+  // Se tiver menos de 3 letras, só aceita se estiver na lista
+  return nomesCurtosValidos.some(n => n.toLowerCase() === nomeTrim.toLowerCase());
+}
+
+function validateField(field) {
+  let isValid = true;
+
+  if (field.name === "name") {
+    isValid = validarNome(field.value);
+  } 
+  else if (field.type === "email") {
+    isValid = /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(field.value);
+  } 
+  else {
+    isValid = field.value.trim().length >= (field.getAttribute("minlength") || 1);
+  }
+
+  field.classList.remove("valid", "invalid");
+  if (field.classList.contains("touched")) {
+    field.classList.add(isValid ? "valid" : "invalid");
+  }
+
+  return isValid;
+}
+
 inputs.forEach(input => {
   input.addEventListener("input", () => {
     input.classList.add("touched");
+    validateField(input);
   });
   input.addEventListener("blur", () => {
     input.classList.add("touched");
+    validateField(input);
   });
 });
 
 form.addEventListener("submit", async function(e) {
   e.preventDefault();
 
-  // Garante que todos os campos já tenham a classe "touched" ao tentar enviar
-  inputs.forEach(input => input.classList.add("touched"));
+  let allValid = true;
+  inputs.forEach(input => {
+    input.classList.add("touched");
+    if (!validateField(input)) {
+      allValid = false;
+    }
+  });
 
-  if (!form.checkValidity()) {
+  if (!allValid) {
     alert("Por favor, preencha todos os campos corretamente antes de enviar.");
     return;
   }
@@ -123,7 +166,7 @@ form.addEventListener("submit", async function(e) {
     if (response.ok) {
       alert("Mensagem enviada com sucesso!");
       form.reset();
-      inputs.forEach(input => input.classList.remove("touched")); // Remove bordas após envio
+      inputs.forEach(input => input.classList.remove("touched", "valid", "invalid"));
     } else {
       alert("Ocorreu um erro ao enviar. Tente novamente.");
     }

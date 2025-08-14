@@ -129,12 +129,19 @@
         </div>
         <div class="formulario">
           <h2>Entre em Contato</h2>
-          <form id="contactForm" action="https://formspree.io/f/SEU_ID_AQUI" method="POST" novalidate>
-            <input type="text" name="name" placeholder="Seu nome" required minlength="3">
+          
+          <form id="contactForm" action="https://formspree.io/f/xldlgynn" method="POST" novalidate>
+            <input type="text" name="name" placeholder="Seu nome" required
+                  pattern="^[A-Za-zÀ-ÿ\s]+$"
+                  title="Digite apenas letras, com ou sem sobrenome">
+            
             <input type="email" name="email" placeholder="Seu e-mail" required>
-            <textarea name="message" rows="5" placeholder="Sua mensagem" required minlength="5"></textarea>
+            <textarea name="message" rows="6" placeholder="Sua mensagem" required minlength="5"></textarea>
+            
             <button type="submit">Enviar</button>
           </form>
+
+
 
         </div>
       </div>

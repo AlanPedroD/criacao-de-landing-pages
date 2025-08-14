@@ -174,3 +174,22 @@ form.addEventListener("submit", async function(e) {
     alert("Erro de conexão. Tente mais tarde.");
   }
 });
+
+
+function revealOnScroll() {
+  const reveals = document.querySelectorAll(".reveal");
+
+  for (let i = 0; i < reveals.length; i++) {
+    const windowHeight = window.innerHeight;
+    const elementTop = reveals[i].getBoundingClientRect().top;
+    const revealPoint = 70;
+
+    if (elementTop < windowHeight - revealPoint) {
+      reveals[i].classList.add("active");
+    } else {
+      reveals[i].classList.remove("active");
+    }
+  }
+}
+
+window.addEventListener("scroll", revealOnScroll);

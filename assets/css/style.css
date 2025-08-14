@@ -210,6 +210,18 @@ p {
   color: #222831;
 }
 
+/*? Rolagem suave nas seções */
+.reveal {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 0.8s ease;
+}
+
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 /*! Seção serviços e seção proejtos */
 .container-servicos{
   /* background: linear-gradient(to bottom, #EAEFEF, #7F8CAA, #333446); */

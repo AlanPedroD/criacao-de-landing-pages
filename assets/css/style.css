@@ -262,14 +262,35 @@ p {
 
 .card {
   padding: 1.5rem;
-  transition: transform 0.2s ease;
   position: relative;
   overflow: hidden;
   border: 1px solid #EAEFEF;
+  border-radius: 4px;
+  /* background: #333446; */
+  transition: filter 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover: efeito perceptível no fundo escuro */
 .card:hover {
-  transform: translateY(-5px);
+  filter: brightness(1.2); /* deixa o card mais claro ao passar o mouse */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3); /* destaque elegante */
+}
+
+.card .btn-orcamento {
+  position: absolute;
+  bottom: 11px;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  border-radius: 4px;
+  padding: 12px 18px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  border: 0;
+  background-color: #06203b;
+  color: #EAEFEF;
+  box-shadow: 0 8px 24px rgba(11, 102, 255, 0.12);
 }
 
 .card h4 {

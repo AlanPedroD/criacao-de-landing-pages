@@ -552,13 +552,19 @@ footer a{
 }
 @media(max-width: 664px){
   .container-imagem{
-  width: 100%;
-  max-width: 560px;
-  justify-content: center;
-}
-.container-imagem img{
+    width: 100%;
+    max-width: 560px;
+    justify-content: center;
+  }
+  .container-imagem img{
   max-height: 360px;
-}
+  }
+  .container-formulario{
+    padding: 80px 10px 80px 10px;
+  }
+  .formulario{
+    padding: 20px;
+  }
 }
 
 @media(max-width: 376px){

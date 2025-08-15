@@ -15,6 +15,30 @@ document.addEventListener('click', function (event) {
   }
 });
 
+const menuLinks = mobileMenu.querySelectorAll('a[href^="#"]');
+
+menuLinks.forEach(link => {
+  link.addEventListener('click', (e) => {
+    e.preventDefault(); // Evita o salto imediato
+
+    const targetId = link.getAttribute('href');
+    const targetSection = document.querySelector(targetId);
+
+    if (targetSection) {
+      targetSection.scrollIntoView({
+        behavior: 'smooth'
+      });
+
+      // Fecha o menu depois da rolagem (tempo ajustável)
+      setTimeout(() => {
+        mobileMenu.classList.remove('active');
+        hamburger.classList.remove('active');
+      }, 500); // 0.5s funciona bem, mas você pode ajustar
+    }
+  });
+});
+
+
 // ==================== IGUALAR ALTURA DOS CARDS ====================
 function igualarAlturaDosCards() {
   const cards = document.querySelectorAll('.card');

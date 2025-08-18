@@ -174,7 +174,7 @@ p {
 
 .hero-imagem .overlay {
   background-color: rgba(0, 0, 0, 0.6);
-  padding: 60px 20px;
+  padding: 20px 20px 40px 20px;
   width: 60%;
   text-align: center;
   border-radius: 4px;
@@ -593,11 +593,11 @@ footer a{
   }
 }
 
-@media(max-width: 768px){
-  .hero-imagem .overlay {
-  padding: 40px 20px;
-  width: 80%;
-}
+@media(max-width: 769px){
+  .hero-imagem .overlay{
+    width: 100%;
+    padding-top: 20%;
+  }
 }
 
 /*! Responsividade Rodapé */
@@ -619,9 +619,6 @@ footer a{
   justify-content: center;
   align-items: center;
   text-align: center;
-}
-.hero-imagem .overlay{
-  width: 100%;
 }
 
 }
